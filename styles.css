@@ -1,10 +1,16 @@
- /** Comentarios**/
+ /* Comentarios */
+ /* Globais */
+
  body{
     background: #e5e5e5;
     color: #25282B;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 
+}
+
+body.hideScroll{
+    overflow: hidden;
 }
 
 
@@ -19,14 +25,35 @@ a:hover{
     text-decoration: underline;
 }
 
-p{
-    margin-right: 32px;
-}
+
 p, .description{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.1px;
 }
+
+.button{
+    color: white;
+    background: #ff5E84;
+    font-size: 14px;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(255,0,92,0.16); /* ou #ff5E8432*/
+    
+}
+
+.button:hover{
+    background-color: #0984e3;
+    text-decoration: none;
+}
+
+
+/* Padrao */
 
 #container{
     width: 90%;
@@ -39,7 +66,8 @@ p, .description{
 
 #intro{
     width: 300px;
-    margin-right: 20px;
+    margin-right: 64px;
+    
 }
 
 main{
@@ -71,19 +99,6 @@ button:hover{
     text-decoration: underline;
 }
 
-button.fat{
-    color: white;
-    background: #ff5E84;
-    width: 150px;
-    height: 40px;
-    border-radius: 6px;
-    box-shadow: 0px 8px 16px rgba(255,0,92,0.16); /* ou #ff5E8432*/
-    
-}
-
-button.fat:hover{
-    text-decoration: none;
-}
 
 footer{
     text-align: center;
@@ -133,15 +148,20 @@ footer a{
     background: #ff5E84;
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 100vw;
+   bottom: 0;
+   right: 0;
+   left: 0;
 
     display: flex;
     justify-content: center;
 }
 
+#modal.addScroll{
+    overflow: auto;
+}
+
 #modal .content{
-    margin-top: 128px;
+    margin-top: 15%;
 
     color: white;
 }
@@ -154,7 +174,7 @@ footer a{
 #modal .content form{
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 15%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px
@@ -227,4 +247,70 @@ form button:hover{
 #modal.hide{
     opacity: 0;
     visibility: hidden;
+}
+
+
+/* ideias.html */
+
+#page-ideias #container{
+    display: block;
+}
+
+#page-ideias header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav{
+    display: flex;
+    align-items: center;
+}
+
+#page-ideias li{
+    list-style-type: none;
+    margin-right: 16px;
+}
+
+#page-ideias nav li a{
+    color: #25282B ;
+}
+
+#page-ideias nav li a.button{
+    color: white ;
+}
+
+#page-ideias nav li:last-child{
+    margin: 0;
+}
+
+
+
+ section#title{
+     text-align: center;
+ }
+
+ section#title p{
+     opacity: 0.7;
+     margin: 0;
+ } 
+
+ section#title H1{
+     margin: 0;
+     font-size: 28px;
+ }
+
+ section#ideas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+section#ideas .idea{
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer{
+    margin-top: 64px;
 }
